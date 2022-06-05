@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+nav{
+    background-color: orangered;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+nav .home-page{
+    color: white;
+    font-size: 35px;
+    word-spacing: 6px;
+    font-weight: 1000;
+    text-decoration: none;
+    transition: 0.5s ease;
+
+    cursor: pointer;
+
+}
+nav .home-page:hover{
+    color: black;
+}
+
+.nav-links ul li {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.5s ease;
+}
+.nav-links ul li a:hover{
+    color: black;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;  
+    height: 2px;
+    background: black;
+    display: block;
+    margin: auto;
+    transition: 0.5s ease;
+    cursor: pointer;
+  
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.form{
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    
+    border: 2px solid red;
+    
+    margin: 30px 0px 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px orangered;
+    border-radius: 8px;
+
+    
+
+}
+.formgrp{
+    width: 100%;
+    margin: 10px 0px;
+    font-size: 24px;
+
+}
+.formgrp input, .formgrp textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 5px;
+    border: 1px solid lightcoral;
+
+}
+textarea{
+    resize: vertical;
+
+
+}
+button[type="submit"]{
+    width: 100%;
+    font-size: 24px;
+
+    border: none;
+    outline: none;
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease background-color;
+}
+button[type="submit"]:hover{
+    background-color: orange;
+    color: white;
+}
+#status{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin: 20px 0 10px;
+}
+#status.success{
+    background-color: lightgreen;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    animation: status 4s  ease   forwards;
+    
+}
+#status.error{
+    background-color: rgb(183, 54, 54);
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    animation: status 4s  ease forwards;
+}
+
+@keyframes status{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
